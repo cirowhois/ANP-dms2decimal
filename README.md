@@ -7,9 +7,9 @@ A Agência Nacional do Petróleo (ANP) disponibiliza para acesso, consulta e dow
 ## Problema
 Ao exportar a base completa com tancagem, além das colunas de combustíveis e bicos o sistema disponibiliza as colunas de latitude e longitude do posto.
 Isso é excelente, pois muitos postos ficam na beira de estradas e rodovias e isso dificulta um processo de geocodificação automática acurado.
-O problema é que estes dados vêm no formato de Graus, Minutos e Segundos, necessitando uma conversão para o formato de Graus Decimais, uma vez que nem todos os sistemas e/ou bancos de dados são preparados para recebê-los assim.
+O problema é que estes dados vêm no formato de **Graus, Minutos e Segundos** separados por **:**, necessitando uma conversão para o formato de **Graus Decimais**, uma vez que nem todos os sistemas e/ou bancos de dados são preparados para recebê-los assim.
 
 <img title="Processo" alt="Processo" src="img\processo.png">
 
 ## Exemplo de uso
-Plotagem dos dados convertidos em um mapa usando o GeoPandas
+Conversão e plotagem dos dados convertidos usando o GeoPandas no arquivo *example.ipynb*.
