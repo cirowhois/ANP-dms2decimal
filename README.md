@@ -1,9 +1,9 @@
-## Uso
-O `converter_latlong` converte as lat longs de postos de combustível disponbilizadas pela ANP no formato específico ```-22:20:40,647   -49:03:46,018``` para ```-22.344624166667   -49.062782777778```.
-Único argumento é o `DataFrame` de entrada.
+# O que é:
+Este projetinho veio de um estudo pessoal que entre outros pontos precisou da geração deste script. 
 
+O objetivo é converter as latitudes e longitudes de postos de combustível disponbilizadas pela ANP no formato específico ```-22:20:40,647,-49:03:46,018``` para ```-22.344624166667,-49.062782777778```.
 
-## Problema
+### Problema
 A Agência Nacional do Petróleo (ANP) disponibiliza para acesso, consulta e download os dados de Revendedores de Combustível do Brasil. Nos últimos anos este serviço de consulta passou por diversas mudanças e hoje está em [Consulta de Postos](https://cdp.anp.gov.br/ords/r/cdp_apex/consulta-dados-publicos-cdp/consulta-de-postos-lista?).
 
 <img title="Home Page" alt="Home Page" src="img\homepage.png">
@@ -14,5 +14,17 @@ O problema é que estes dados vêm no formato de **Graus, Minutos e Segundos** s
 
 <img title="Processo" alt="Processo" src="img\process.png">
 
-## Exemplo de uso
-Conversão e plotagem dos dados convertidos usando o GeoPandas no arquivo `exemplo.ipynb`.
+
+### Steps:
+* Separação dos Graus, Minutos e Segundos;
+* Cálculo de conversão;
+* Geração da coluna final de Lat x Long.
+
+
+### Utilidade:
+* Sistema de Consulta de Postos: https://cdp.anp.gov.br/ords/r/cdp_apex/consulta-dados-publicos-cdp/consulta-de-postos-lista?
+* Fórmula: `Graus Decimais` = `Grau` + (`Minuto`/60) + (`Segundo`/3600)
+
+
+### Exemplo de aplicação
+Conversão e plotagem simples dos dados convertidos usando o GeoPandas no arquivo `exemplo.ipynb`.
